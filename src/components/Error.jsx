@@ -1,11 +1,11 @@
 import React from "react";
-import ObiWan from "../components/obiwankenobi1.jpeg";
+import ObiWan from "../obiwankenobi1.jpeg";
 
 const Error = () => {
-    return(
+    return (
         <div>
             <p>These aren't the droids you're looking for!</p>
-            <img src={ObiWan} />
+            <img src={ObiWan} alt="ObiWanKenObi_Picture" />
         </div>
     )
 }

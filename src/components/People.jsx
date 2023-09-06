@@ -4,22 +4,22 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const People = () => {
-    const {id} = useParams();
+    const { id } = useParams();
     const [character, setCharacter] = useState(null);
 
     const navigate = useNavigate();
 
-    useEffect(() =>{
+    useEffect(() => {
         axios.get(`https://swapi.dev/api/people/${id}/`)
-        .then((response) => {setCharacter(response.data);})
-        .catch(() => navigate("/error"));
-    }, [ id, navigate ]);
+            .then((response) => { setCharacter(response.data); })
+            .catch(() => navigate("/error"));
+    }, [id, navigate]);
 
-    if (character == null){
+    if (character == null) {
         return <h3>Loading!</h3>
     };
 
-    return(
+    return (
         <div className="container">
             <div className="card-shadow">
                 <div className="card-body">
