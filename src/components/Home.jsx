@@ -25,13 +25,14 @@ const Home = () => {
                 value={resource.option}
                 onChange={handleChange}
                 >
-                    <option></option>
+                    <option value="people">People</option>
+                    <option value="planets">Planets</option>
                 </select>
+                <label>ID:</label>
+                <input className="btn btn-success">Search</input>
             </form>
         </div>
-    )
-
-
+    );
 }
 
 export default Home;
