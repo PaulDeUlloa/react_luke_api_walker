@@ -13,7 +13,7 @@ const People = () => {
         axios.get(`https://swapi.dev/api/people/${id}/`)
             .then((response) => { setCharacter(response.data); })
             .catch(() => navigate("/error"));
-    }, [id, navigate]);
+    }, [id]);
 
     if (character == null) {
         return <h3>Loading!</h3>
@@ -27,8 +27,8 @@ const People = () => {
                     <br></br>
                     <h3> Height: {character.height} </h3>
                     <h3> Mass: {character.mass}</h3>
-                    <h3> Hair Color: {character.hairColor}</h3>
-                    <h3> Skin Color: {character.skinColor}</h3>
+                    <h3> Hair Color: {character.hair_color}</h3>
+                    <h3> Skin Color: {character.skin_color}</h3>
                 </div>
             </div>
         </div>

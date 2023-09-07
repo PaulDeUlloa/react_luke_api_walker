@@ -13,7 +13,7 @@ const Planets = () => {
         axios.get(`https://swapi.dev/api/planets/${id}/`)
             .then((response) => { setPlanet(response.data); })
             .catch(() => navigate("/error"));
-    }, [id, navigate]);
+    }, [id]);
 
     if (planet == null) {
         return <h3>Loading!</h3>
